@@ -23,3 +23,5 @@
     <?php endif; ?>
     <p class="form-footer"><a href="index.php?route=login">Volver a iniciar sesión</a></p>
 </section>
+
+
