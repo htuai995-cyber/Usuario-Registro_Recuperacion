@@ -11,6 +11,7 @@ $flash = take_flash();
     <script src="assets/js.js" defer></script>
 </head>
 <body>
+    <canvas class="ambient-canvas" id="ambient-canvas" aria-hidden="true"></canvas>
     <header class="site-header">
         <a class="brand" href="index.php?route=login">LoginB</a>
         <?php if (isset($_SESSION['user_id'])): ?>
@@ -18,6 +19,8 @@ $flash = take_flash();
                 <input type="hidden" name="csrf_token" value="<?= h(csrf_token()) ?>">
                 <button class="button button-link" type="submit">Cerrar sesión</button>
             </form>
+        <?php else: ?>
+            <span class="header-caption">Acceso seguro a tu cuenta</span>
         <?php endif; ?>
     </header>
     <main class="page">
